@@ -21,12 +21,24 @@
 // NodeJS with Express
 // Require our dependencies
 var express = require('express');
+var expressLayouts = require('express-ejs-layouts');
 var app = express();
 var port = 8080;
 var router = require('./app/routes');
 
+// Use EJS and Express Layouts
+app.set('view engine', 'ejs');
+app.use(expressLayouts);
+
 // Route our app
 app.use('/', router);
+
+// Use EJS and Express Layouts
+app.set('view engine', 'ejs');
+app.use(expressLayouts);
+
+// Set static files (css, images, etc.) location
+app.use(express.static(__dirname + '/public'));
 
 // Start the server
 app.listen(port, function() {
