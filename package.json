@@ -4,7 +4,8 @@
   "description": "Basic nodejs website with express and EJS",
   "main": "server.js",
   "dependencies": {
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "nodemon": "^1.11.0"
   },
   "devDependencies": {},
   "scripts": {
